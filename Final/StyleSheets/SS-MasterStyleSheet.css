@@ -1,5 +1,4 @@
-﻿/* Explicitly set the webpages margins */
-html, body {
+﻿html, body {
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -8,7 +7,7 @@ html, body {
 }
 
 
-.tg {
+/*.tg {
     border-collapse: collapse;
     border-spacing: 0;
     border-color: #aaa;
@@ -75,4 +74,4 @@ html, body {
     font-size: 18px;
     text-align: left;
     vertical-align: top
-}
+}*/
