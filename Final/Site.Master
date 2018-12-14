@@ -19,18 +19,9 @@
         <br /><br /><br /><br />
 
         <form name="submitForm" runat="server">
-            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
-            
-
-            <!-- DEBUG -->
             <div>            
-                <asp:UpdatePanel ID="AjaxUpdatePanel" runat="server">
-                    <ContentTemplate>
-                 
-                        <!-- Body content determined by the default web page-->
-                        <asp:ContentPlaceHolder id="PageBodyContent" runat="server" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+                <!-- Body content determined by the default web page-->
+                <asp:ContentPlaceHolder id="PageBodyContent" runat="server" />
             </div>
         </form>
     </body>

@@ -1,36 +1,28 @@
-﻿
-
-
-<%-- Content place holder for any scripts required for the default page --%>
-<%@ Page Title="Homepage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Default" %>
-<asp:Content ID="ScriptContent" ContentPlaceHolderID="PageHeadContent" runat="server">
-    
-
-    <!-- Load the jquery scripts from the source solders -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/JQuery.js"></script>
-
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Page1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="PageHeadContent" runat="server">
 </asp:Content>
-
 
 <%-- Body content for the default page- Get the users name and ensure its valid before continuing to page 2 --%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="PageBodyContent" runat="server">
     
+
+    <!-- Table containing the instructions,and input fields for the first page -->
     <table runat="server">
         <tr>
             <td colspan="2">Please enter your first name</td>
         </tr>
+
+
+        <!-- Input for firstName and validate it -->
         <tr>
-            <td runat="server">    <!-- Input for firstName-->
+            <td runat="server">   
                 <asp:TextBox 
                     ID="firstNameTB" 
                     PlaceHolder="John" 
                     MaxLength="50" 
                     runat="server"/>
             </td>
-
-            <td runat="server">    <!-- Validator for firstName -->
+            <td runat="server">
                 <asp:RegularExpressionValidator 
                     ID="firstNameValidator" 
                     ValidationExpression="^[A-Za-z]+$"
@@ -42,8 +34,11 @@
         <tr>
             <td  colspan="2">Please enter your last name</td>
         </tr>
+
+
+        <!-- Input for lastName and validate it -->
         <tr>
-            <td runat="server">    <!-- Input for lastName -->
+            <td runat="server">
                 <asp:TextBox 
                     ID="lastNameTB" 
                     PlaceHolder="Smith"
@@ -52,7 +47,7 @@
             </td>
 
 
-            <td runat="server">    <!-- Validator for lastName-->
+            <td runat="server">    
                 <asp:RegularExpressionValidator 
                     ID="lastNameValidator" 
                     ValidationExpression="^[A-Za-z]+$"
@@ -61,7 +56,10 @@
                     runat="server" />
             </td>
         </tr>
-        <tr>    <!-- Button to continue to page 2 -->
+
+
+        <!-- Button to continue to page 2 -->
+        <tr>    
             <td colspan="2" runat="server">
                 <asp:Button ID="enterButton" Text="Enter" Onclick="EnterButtonClick" runat="server"/>
             </td>
