@@ -23,9 +23,11 @@ namespace Final
             string lastName = Convert.ToString(Session["sessionlastName"]);
 
             string pizzaList = Convert.ToString(Session["pizzaIngredients"]);
+            string status = Convert.ToString(Session["orderStatus"]);
             CustomerFirst.Text = firstName;
             CustomerLast.Text = lastName;
             CustomerOrder.Text = pizzaList;
+            CustomerOrderStatus.Text = status;
         }
     }
 }
