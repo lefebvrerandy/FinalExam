@@ -29,8 +29,8 @@
 .pageContainer {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 45%;
+    width: 48%;
+    min-height: 50%;
     border-radius: 25px;
     box-shadow: 8px 8px 35px 5px rgba(0,0,0,0.75);
     background-image: url("/Assets/cardboard_texture.jpg");
@@ -66,20 +66,29 @@
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    font-size:larger;
+    font-size:x-large;
 }
 
 .errorMessage {
     font-size: 30px;
     font-family: verdana;
     color: tomato;
+    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
 }
 
 .button {
-    position:fixed;
+    position: fixed;
+    background-color: #4CAF50;
+    display: inline-block;
+    padding: 15px 32px;
+    text-align: center;
     margin-left: 0px;
     margin-right: 0px;
+    font-size: 30px;
+    font-family: verdana;
+    color: #FFFFFF;
     cursor: pointer;
+    border-radius: 15px;
 }
 
     .button:hover {

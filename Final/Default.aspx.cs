@@ -25,7 +25,7 @@ namespace Final
                 bool inputValid = stringChecker.CheckForEnglishChars(firstNameTB.Text);
                 if(inputValid == true)
                 {
-                    firstNameValidator.Attributes["style"] = "color:MediumSeaGreen;";
+                    firstNameValidator.Attributes["style"] = "color:#4CAF50;";
                     firstNameValidator.Text = "Accepted";
 
 
