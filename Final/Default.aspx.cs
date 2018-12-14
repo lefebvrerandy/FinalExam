@@ -19,7 +19,7 @@ namespace Final
         {
 
             //Check if the user entered a blank first and last name
-            if()
+            if ((firstNameTB.Text == "") || (lastNameTB.Text == ""))
             {
                 firstNameValidator.ErrorMessage = "";
             }

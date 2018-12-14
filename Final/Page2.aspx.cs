@@ -11,9 +11,10 @@ namespace Final
     {
         double total = 0;
         string totalOrder = string.Empty;
+        static string finalOrder = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Session["pizzaIngredients"] = "default";
         }
 
         /*
@@ -80,9 +81,9 @@ namespace Final
                 {
                     totalOrder += "No Toppings selected";
                 }
-
                 Label2.Text = totalOrder;    
                 Label1.Text = "$" + total.ToString("0.00");
+
             }
             else
             {
@@ -90,6 +91,8 @@ namespace Final
                 Label2.Text = totalOrder;
                 Label1.Text = "Please select pizza before adding toppings.";
             }
+
+            finalOrder = totalOrder;
         }
 
 
@@ -135,7 +138,7 @@ namespace Final
             if (CheckBox1.Checked)
             {
                 // Save contents of their pizza listing
-                Session["pizzaIngredients"] = totalOrder;
+                Session["pizzaIngredients"] = finalOrder;
 
                 // Redirect to page 3. 
                 Server.Transfer("Page3.aspx");
