@@ -11,7 +11,22 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            LoadSessionVariables();
 
+        }
+
+        /// <summary>
+        /// Load the users session variables into the global values
+        /// </summary>
+        private void LoadSessionVariables()
+        {
+            string firstName = Convert.ToString(Session["sessionFirstName"]);
+            string lastName = Convert.ToString(Session["sessionlastName"]);
+
+            string pizzaList = Convert.ToString(Session["pizzaIngredients"]);
+            CustomerFirst.Text = firstName;
+            CustomerLast.Text = lastName;
+            CustomerOrder.Text = pizzaList;
         }
     }
 }

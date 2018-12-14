@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Customize your Pizza" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
+<%@ Page Title="Customize your Pizza" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageBodyContent" runat="server">
     <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
         <script type="text/javascript">
         </script>
 
-
+    <p class="CheckBox">
                     <asp:CheckBox id="CheckBox1" runat="server"
                     AutoPostBack="True" ForeColor="#FF3300"
                     Text="Pizza"
@@ -42,16 +42,18 @@
                     Text="Extra Cheese"
                     TextAlign="Right"
                     OnCheckedChanged="SelectedItems"/>
+        </p>
 
-
+        <p class="updateCost">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <font color="#FF3300"> TOTAL:</font> 
                             <asp:Label ID="Label1" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
+                            </br>
                             <asp:Label ID="Label2" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>
-
+        </p>
                     <asp:Button ID="SubmitBtn" runat="server" Text="Make It!" OnClick="CheckIfValid" />
 
 </asp:Content>

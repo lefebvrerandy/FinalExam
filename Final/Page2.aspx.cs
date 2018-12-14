@@ -4,14 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 namespace Final
 {
-    public class JSONObject
-    {
-        public string fileName { get; set; }
-        public string textContent { get; set; }
-    }
-
     public partial class Page2 : System.Web.UI.Page
     {
         double total = 0;
@@ -22,10 +17,10 @@ namespace Final
         }
 
         /*
-    Pizza = $10
-    Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
-    Double Cheese = $1.50
-*/
+            Pizza = $10
+            Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
+            Double Cheese = $1.50
+        */
 
         // This method calls PizzaToppingSelected() to find out which checkboxes are checked.
         // It then adjusts the totals accordingly.
