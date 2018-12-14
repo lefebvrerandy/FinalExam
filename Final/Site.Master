@@ -15,13 +15,18 @@
     </head>
     <body class="masterBody" runat="server">
 
-        <h1>SET Pizza Shop</h1>
-        <br /><br /><br /><br />
+        <div class="headerbar">
+            <h1 class ="pageTitle">SET Pizza Shop</h1>
+        </div>
+        <br /><br />
 
         <form name="submitForm" runat="server">
-            <div>            
-                <!-- Body content determined by the default web page-->
+            <div class="pageContainer"> 
+
+                <!-- Body content determined by the current page the user is on -->
                 <asp:ContentPlaceHolder id="PageBodyContent" runat="server" />
+
+                <br />
             </div>
         </form>
     </body>

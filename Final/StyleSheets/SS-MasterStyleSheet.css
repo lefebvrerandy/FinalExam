@@ -1,11 +1,90 @@
-﻿html, body {
+﻿body {
     margin: 0px;
     padding: 0px;
     border: 0px;
     left: 0px;
     top: 0px;
+    background-image: url("/Assets/oldschoolTable - Copy.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
 }
 
+.headerbar {
+    width: 100%;
+    display: block;
+    background: #B56712;
+    background: linear-gradient(to right, #B56712 0%, #FFCB29 50%, #B56712 100%);
+    text-align: center;
+}
+
+.pageTitle {
+    font-size: 70px;
+    font-family: verdana;
+    text-align: center;
+    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+    color: #FFFFFF;
+}
+
+.pageContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 45%;
+    border-radius: 25px;
+    box-shadow: 8px 8px 35px 5px rgba(0,0,0,0.75);
+    background-image: url("/Assets/cardboard_texture.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.subHeading {
+    font-size: 40px;
+    font-family: verdana;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.firstNameInstructions {
+    font-size: 30px;
+    font-family: verdana;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+}
+
+.lastNameinstructions {
+    font-size: 30px;
+    font-family: verdana;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+}
+
+.textboxInput {
+    border-style: inset;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size:larger;
+}
+
+.errorMessage {
+    font-size: 30px;
+    font-family: verdana;
+    color: tomato;
+}
+
+.button {
+    position:fixed;
+    margin-left: 0px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        box-shadow: 8px 8px 35px 5px rgba(0,0,0,0.75);
+    }
 
 /*.tg {
     border-collapse: collapse;

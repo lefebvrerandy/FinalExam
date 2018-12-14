@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\brightWoodVegieTable.jpg" />
+    <Content Include="Assets\cardboard_texture.jpg" />
+    <Content Include="Assets\oldschoolTable - Copy.jpg" />
+    <Content Include="Assets\oldschoolTable.jpg" />
     <Content Include="Default.aspx" />
     <Content Include="Page2.aspx" />
     <Content Include="Page3.aspx" />
@@ -83,6 +87,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InputValidator.cs" />
     <Compile Include="Page2.aspx.cs">
       <DependentUpon>Page2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,6 +125,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
