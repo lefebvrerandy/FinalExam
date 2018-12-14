@@ -18,6 +18,15 @@ namespace Final
         protected void EnterButtonClick(object sender, EventArgs e)
         {
 
+            //Check if the user entered a blank first and last name
+            if()
+            {
+                firstNameValidator.ErrorMessage = "";
+            }
+
+
+
+
             string firstNameString = firstNameTB.Text;
             string lastNameString = lastNameTB.Text;
 

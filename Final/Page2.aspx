@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Customize your Pizza" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
+﻿<%@ Page Title="Step 2: Customize your Pizza" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageBodyContent" runat="server">
     <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
         <script type="text/javascript">
