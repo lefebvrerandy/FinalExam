@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="HeaderPlaceHolder" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="PageHeadContent" runat="server">
 </asp:Content>
 
 
@@ -52,6 +52,7 @@
                         <ContentTemplate>
                             <font color="#FF3300"> TOTAL:</font> 
                             <asp:Label ID="Label1" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
+                            </br>
                             <asp:Label ID="Label2" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>

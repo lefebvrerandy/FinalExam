@@ -13,11 +13,11 @@ namespace Final
         protected void EnterButtonClick(object sender, EventArgs e)
         {
 
-            string firstNameString = firstNameTB.Text;
-            string lastNameString = lastNameTB.Text;
+            //string firstNameString = firstNameTB.Text;
+            //string lastNameString = lastNameTB.Text;
 
-            Session["sessionFirstName"] = firstNameString;
-            Session["sessionlastName"] = lastNameString;
+            //Session["sessionFirstName"] = firstNameString;
+            //Session["sessionlastName"] = lastNameString;
             Server.Transfer("Page2.aspx");
         }
 
