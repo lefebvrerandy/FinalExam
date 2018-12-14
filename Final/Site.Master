@@ -2,13 +2,13 @@
 <!DOCTYPE html PUBLIC>
 <html lang="en">
     <head runat="server">
-        <title><%: Page.Title %>: Pizza</title>
+        <title><%: Page.Title %></title>
 		<meta charset="ASCII">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="~/StyleSheets/SS-MasterStyleSheet.css" rel="stylesheet" type="text/css" runat="server"/>
                 
         
-        <!-- DEBUG -->
+        <!-- Place holder for the header content added in each page -->
         <asp:ContentPlaceHolder id="PageHeadContent" runat="server" />
 
 

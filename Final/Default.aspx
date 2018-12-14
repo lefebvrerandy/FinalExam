@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Page1" %>
+﻿<%@ Page Title="Step 1: Getting your name" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Page1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageHeadContent" runat="server">
 </asp:Content>
+
 
 <%-- Body content for the default page- Get the users name and ensure its valid before continuing to page 2 --%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="PageBodyContent" runat="server">
