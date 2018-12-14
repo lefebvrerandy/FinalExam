@@ -1,34 +1,40 @@
-﻿using System;
+﻿/*  Name:           Randy Lefebvre & Bence Karner
+ *  Program:        Web Design - PROG2000
+ *  Description:    This file is the code behind Page2.aspx. This holds all the methods and ajax methods for Page2.aspx
+ *                  to work. Methods in here include: SelectItems, pizzaToppingsSelected, CheckIfValid
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 namespace Final
 {
-    public class JSONObject
-    {
-        public string fileName { get; set; }
-        public string textContent { get; set; }
-    }
-
     public partial class Page2 : System.Web.UI.Page
     {
         double total = 0;
         string totalOrder = string.Empty;
+        static string finalOrder = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Session["pizzaIngredients"] = "default";
         }
 
         /*
-    Pizza = $10
-    Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
-    Double Cheese = $1.50
-*/
 
-        // This method calls PizzaToppingSelected() to find out which checkboxes are checked.
-        // It then adjusts the totals accordingly.
+        */
+
+        /// <summary>
+        /// This method calls PizzaToppingSelected() to find out which checkboxes are checked.
+        /// It then adjusts the totals accordingly. Each topping are as followed:
+        ///             Pizza = $10
+        ///             Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
+        ///             Extra Cheese = $1.50
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void SelectedItems(object sender, EventArgs e)
         {
 
@@ -85,9 +91,9 @@ namespace Final
                 {
                     totalOrder += "No Toppings selected";
                 }
-
                 Label2.Text = totalOrder;    
                 Label1.Text = "$" + total.ToString("0.00");
+
             }
             else
             {
@@ -95,11 +101,16 @@ namespace Final
                 Label2.Text = totalOrder;
                 Label1.Text = "Please select pizza before adding toppings.";
             }
+
+            finalOrder = totalOrder;
         }
 
 
-        // The method to find out how many options are selected. It fills the string array with the options
-        // that are checked, and then returns the array to the calling method.
+        /// <summary>
+        /// The method to find out how many options are selected. It fills the string array with the options
+        /// that are checked, and then returns the array to the calling method.
+        /// </summary>
+        /// <returns>string[] - all toppings selected</returns>
         private string[] pizzaToppingsSelected()
         {
             string[] selectedTopping = { "", "", "", "", "", ""};
@@ -133,6 +144,12 @@ namespace Final
             return selectedTopping;
         }
 
+        /// <summary>
+        /// This method simpally checks to see if atleast the Pizza checkbox is selected. If so
+        /// they can move on to the next page. If not, they cannot go to the next page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void CheckIfValid(object sender, EventArgs e)
         {
             // The user atleast has selected pizza.
@@ -140,7 +157,7 @@ namespace Final
             if (CheckBox1.Checked)
             {
                 // Save contents of their pizza listing
-                Session["pizzaIngredients"] = totalOrder;
+                Session["pizzaIngredients"] = finalOrder;
 
                 // Redirect to page 3. 
                 Server.Transfer("Page3.aspx");
