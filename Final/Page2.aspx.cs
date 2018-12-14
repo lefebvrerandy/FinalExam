@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * 
+ *
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,8 +27,12 @@ namespace Final
             Double Cheese = $1.50
         */
 
-        // This method calls PizzaToppingSelected() to find out which checkboxes are checked.
-        // It then adjusts the totals accordingly.
+        /// <summary>
+        /// This method calls PizzaToppingSelected() to find out which checkboxes are checked.
+        /// It then adjusts the totals accordingly.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void SelectedItems(object sender, EventArgs e)
         {
 
@@ -96,8 +104,11 @@ namespace Final
         }
 
 
-        // The method to find out how many options are selected. It fills the string array with the options
-        // that are checked, and then returns the array to the calling method.
+        /// <summary>
+        /// The method to find out how many options are selected. It fills the string array with the options
+        /// that are checked, and then returns the array to the calling method.
+        /// </summary>
+        /// <returns></returns>
         private string[] pizzaToppingsSelected()
         {
             string[] selectedTopping = { "", "", "", "", "", ""};
@@ -131,6 +142,11 @@ namespace Final
             return selectedTopping;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void CheckIfValid(object sender, EventArgs e)
         {
             // The user atleast has selected pizza.

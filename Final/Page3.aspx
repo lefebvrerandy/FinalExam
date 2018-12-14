@@ -27,11 +27,15 @@
 
 
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+
                     <ProgressTemplate>
-                        <asp:Label ID="TimerCountDown" runat="server" Text="Redirecting in 3 seconds..."
-                            Font-Bold="True" Font-Names="Consolas" ForeColor="#FFCC66" style="color: #FF5050"></asp:Label>
+                        <img src="Countdown_3_2_1.gif" />
+
+<%--                        <asp:Label ID="TimerCountDown" runat="server" Text="Redirecting in 3 seconds..."
+                            Font-Bold="True" Font-Names="Consolas" ForeColor="#FFCC66" style="color: #FF5050"></asp:Label>--%>
                     </ProgressTemplate>
                 </asp:UpdateProgress>
+
     </ContentTemplate>
     </asp:UpdatePanel>
     </p>
