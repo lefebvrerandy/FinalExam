@@ -1,20 +1,20 @@
 ﻿
 
 
-<%-- Content place holder for any scripts required for the default page --%>
+<%--Content place holder for any scripts required for the default page--%>
 <%@ Page Title="Homepage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Default" %>
-<asp:Content ID="ScriptContent" ContentPlaceHolderID="PageHeadContent" runat="server">
-    
 
-    <!-- Load the jquery scripts from the source solders -->
+<asp:Content ID="ScriptContent" ContentPlaceHolderID="PageHeadContent" runat="server">
+
+    //<!-- Load the jquery scripts from the source solders -->
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/JQuery.js"></script>
-
 
 </asp:Content>
 
 
-<%-- Body content for the default page- Get the users name and ensure its valid before continuing to page 2 --%>
+//Body content for the default page- Get the users name and ensure its valid before continuing to page 2
 <asp:Content ID="BodyContent" ContentPlaceHolderID="PageBodyContent" runat="server">
     
     <table runat="server">
