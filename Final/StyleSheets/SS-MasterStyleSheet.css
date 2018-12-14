@@ -1,0 +1,266 @@
+﻿/*
+	FILE          : SS-MasterStyleSheet.css
+    PROJECT       : PROG 2000 - Assignment 7
+	PROGRAMMER    : Bence Karner & Randy Lefebvre
+	DESCRIPTION   : This file houses the cascading style sheets for the web application. The file has been split into 
+                    different segments, where each is dedicated to controlling the style of a specific type of element,
+                    or portion of the web page.
+*/
+
+
+/* Explicitly set the webpages margins */
+html, body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    font-family: verdana;
+}
+
+/* Place order image (White Car Cutout) */
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    left: 0px;
+    top: 0px;
+    background-color: #282c34;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #333;
+    box-shadow: 0px 0px 4px 1px #333;
+}
+
+/* Navigation bar styling */
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    font-family: verdana;
+}
+
+li {
+    float: left;
+}
+
+    li span {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        li span:hover:not(.active) {
+            background-color: #111;
+        }
+
+
+/* Footer properties */
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 125px;
+    color: white;
+    text-align: left;
+    background-image: linear-gradient(to right, #333,black);
+    box-shadow: 2px 2px 4px 2px black;
+    font-family: verdana;
+    transition: margin-left .5s;
+}
+
+
+/* Position for name  */
+.footerCompanyDetails {
+    position: relative;
+    left: 137px;
+    transition: margin-left .5s;
+}
+
+.footerQuote {
+    position: fixed;
+    right: 110px;
+    bottom: 0%;
+    color: white;
+    transition: margin-left .5s;
+}
+
+.footerDecoration {
+    position: fixed;
+    right: -58px;
+    bottom: -53px;
+}
+
+
+/* Company Logo */
+.companyLogo {
+    position: fixed;
+    z-index: 1;
+    width: 123px;
+    height: 123px;
+    left: 0px;
+    bottom: 0px;
+    border-color: #333;
+    box-shadow: 0px 0px 4px 1px #333;
+    transition: margin-left .5s;
+}
+
+/* Input text box */
+.Textbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 77%;
+    width: 52%;
+    overflow-wrap: break-word;
+    overflow: scroll;
+    resize: none;
+    z-index: -1;
+    transition: margin-left .5s;
+}
+
+
+/* Grid settings*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grdContent {
+    width: 80%;
+    border: solid 2px black;
+    min-width: 80%;
+}
+
+.header {
+    text-align: center;
+    background-color: forestgreen;
+    font-family: Verdana;
+    color: White;
+    border: none 0px transparent;
+    height: 60px;
+    width:auto;
+    font-size: 20px;
+}
+
+
+
+.rows {
+    background-color: #fff;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #000;
+    min-height: 25px;
+    text-align: left;
+    border: none 0px transparent;
+}
+
+    .rows:hover {
+        background-color: lawngreen;
+        font-family: Verdana;
+        color: black;
+    }
+
+
+.selectedrow {
+    background-color: #ff8000;
+    font-family: Verdana;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.mydatagrid a /** FOR THE PAGING ICONS  **/ {
+    background-color: Transparent;
+    padding: 5px 5px 5px 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mygrdContent a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/ {
+    color: #fff;
+}
+
+.mygrdContent span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/ {
+    background-color: #c9c9c9;
+    color: #000;
+    padding: 5px 5px 5px 5px;
+}
+
+.pager {
+    background-color: #646464;
+    font-family: Verdana;
+    color: White;
+    height: 30px;
+    text-align: left;
+}
+
+.mygrdContent td {
+    padding: 5px;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        font-family:Verdana;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+            cursor:pointer;
+        }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.masterBody {
+    transition: margin-left .5s;
+}
