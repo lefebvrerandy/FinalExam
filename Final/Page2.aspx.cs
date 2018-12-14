@@ -61,7 +61,29 @@ namespace Final
                         default:
                             break;
                     }
-                    totalOrder += ", " + selected[i];
+
+                    //These 3 if statemenets set up the totalOrder String values to display
+                    // What, if any, ingredients have been selected
+                    if (totalOrder == "")
+                    {
+                        totalOrder += "Pizza: ";
+                    }
+                    if (totalOrder == "Pizza: ")
+                    {
+                        totalOrder += selected[i];
+                    }
+                    else if (selected[i] != "")
+                    {
+                        totalOrder += ", " + selected[i];
+                    }
+
+
+                }
+
+                // If no toppings are selected. Lets let the user know
+                if (totalOrder == "Pizza: ")
+                {
+                    totalOrder += "No Toppings selected";
                 }
 
                 Label2.Text = totalOrder;    
@@ -69,6 +91,8 @@ namespace Final
             }
             else
             {
+                totalOrder = "";
+                Label2.Text = totalOrder;
                 Label1.Text = "Please select pizza before adding toppings.";
             }
         }
@@ -113,11 +137,15 @@ namespace Final
         {
             // The user atleast has selected pizza.
             // Lets redirect them to the next page with their current order
-            if (CheckBox5.Checked)
+            if (CheckBox1.Checked)
             {
-                // Save contents of 
+                // Save contents of their pizza listing
+                Session["pizzaIngredients"] = totalOrder;
+
                 // Redirect to page 3. 
+                Server.Transfer("Page3.aspx");
             }
+            Label2.Text = "Please at least select a pizza. We cannot make nothing..";
         }
     }
 }
