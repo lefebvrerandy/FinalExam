@@ -1,40 +1,59 @@
-﻿
-
-
-<%-- DEBUG --%>
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="PageHeadContent" runat="server">
-
-
-
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page2.aspx.cs" Inherits="Final.Page2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeaderPlaceHolder" runat="server">
 </asp:Content>
 
 
-
-<%-- DEBUG --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageBodyContent" runat="server">
 
+        <script type="text/javascript">
+        </script>
 
 
+                    <asp:CheckBox id="CheckBox5" runat="server"
+                    AutoPostBack="True" ForeColor="#FF3300"
+                    Text="Pizza"
+                    TextAlign="Right"
+                    OnCheckedChanged="SelectedItems"/>
+
+                    </br>
+
+                    <asp:CheckBox id="CheckBox1" runat="server"
+                    AutoPostBack="True" ForeColor="#FF3300"
+                    Text="Pepperoni"
+                    TextAlign="Right"
+                    OnCheckedChanged="SelectedItems"/>
+
+                    <asp:CheckBox id="CheckBox2" runat="server"
+                    AutoPostBack="True" ForeColor="#FF3300"
+                    Text="Mushrooms"
+                    TextAlign="Right"
+                    OnCheckedChanged="SelectedItems"/>
+
+                    <asp:CheckBox id="CheckBox3" runat="server"
+                    AutoPostBack="True" ForeColor="#FF3300"
+                    Text="Green Olives"
+                    TextAlign="Right"
+                    OnCheckedChanged="SelectedItems"/>
+
+                    <asp:CheckBox id="CheckBox4" runat="server"
+                    AutoPostBack="True" ForeColor="#FF3300"
+                    Text="Green Peppers"
+                    TextAlign="Right"
+                    OnCheckedChanged="SelectedItems"/>
+
+                    <asp:CheckBox id="CheckBox6" runat="server"
+                    AutoPostBack="True" ForeColor="#FF3300"
+                    Text="Extra Cheese"
+                    TextAlign="Right"
+                    OnCheckedChanged="SelectedItems"/>
 
 
-        <table class="tg">
-      <tr>
-        <th class="tg-wnax" colspan="2"><span style="font-weight:bold">Price Calculation</span></th>
-      </tr>
-      <tr>
-        <td class="tg-ss8h">Base Price: </td>
-        <td class="tg-1bic">$10</td>
-      </tr>
-      <tr>
-        <td class="tg-n0m6">Toppings: </td>
-        <td class="tg-nx8p">DEBUG</td>
-      </tr>
-      <tr>
-        <td class="tg-ss8h">Total Price: </td>
-        <td class="tg-1bic">DEBUG</td>
-      </tr>
-    </table>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <font color="#FF3300"> TOTAL:</font> 
+                            <asp:Label ID="Label1" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
 
 </asp:Content>
+
