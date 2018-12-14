@@ -1,6 +1,7 @@
-﻿/*
- * 
- *
+﻿/*  Name:           Randy Lefebvre & Bence Karner
+ *  Program:        Web Design - PROG2000
+ *  Description:    This file is the code behind Page2.aspx. This holds all the methods and ajax methods for Page2.aspx
+ *                  to work. Methods in here include: SelectItems, pizzaToppingsSelected, CheckIfValid
  */
 using System;
 using System.Collections.Generic;
@@ -22,14 +23,15 @@ namespace Final
         }
 
         /*
-            Pizza = $10
-            Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
-            Double Cheese = $1.50
+
         */
 
         /// <summary>
         /// This method calls PizzaToppingSelected() to find out which checkboxes are checked.
-        /// It then adjusts the totals accordingly.
+        /// It then adjusts the totals accordingly. Each topping are as followed:
+        ///             Pizza = $10
+        ///             Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
+        ///             Extra Cheese = $1.50
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -108,7 +110,7 @@ namespace Final
         /// The method to find out how many options are selected. It fills the string array with the options
         /// that are checked, and then returns the array to the calling method.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>string[] - all toppings selected</returns>
         private string[] pizzaToppingsSelected()
         {
             string[] selectedTopping = { "", "", "", "", "", ""};
@@ -143,7 +145,8 @@ namespace Final
         }
 
         /// <summary>
-        /// 
+        /// This method simpally checks to see if atleast the Pizza checkbox is selected. If so
+        /// they can move on to the next page. If not, they cannot go to the next page
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

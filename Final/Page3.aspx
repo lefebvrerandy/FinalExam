@@ -29,7 +29,9 @@
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
 
                     <ProgressTemplate>
-                        <img src="Countdown_3_2_1.gif" />
+
+<%--                        Two options here. Either a static text to explain its a 3 second wait, or a fun little gif that counts down from 3--%>
+                        <img src="Countdown_3_2_1.gif" height="100" width="200"/>
 
 <%--                        <asp:Label ID="TimerCountDown" runat="server" Text="Redirecting in 3 seconds..."
                             Font-Bold="True" Font-Names="Consolas" ForeColor="#FFCC66" style="color: #FF5050"></asp:Label>--%>
