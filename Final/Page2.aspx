@@ -9,7 +9,7 @@
         </script>
 
 
-                    <asp:CheckBox id="CheckBox5" runat="server"
+                    <asp:CheckBox id="CheckBox1" runat="server"
                     AutoPostBack="True" ForeColor="#FF3300"
                     Text="Pizza"
                     TextAlign="Right"
@@ -17,25 +17,25 @@
 
                     </br>
 
-                    <asp:CheckBox id="CheckBox1" runat="server"
+                    <asp:CheckBox id="CheckBox2" runat="server"
                     AutoPostBack="True" ForeColor="#FF3300"
                     Text="Pepperoni"
                     TextAlign="Right"
                     OnCheckedChanged="SelectedItems"/>
 
-                    <asp:CheckBox id="CheckBox2" runat="server"
+                    <asp:CheckBox id="CheckBox3" runat="server"
                     AutoPostBack="True" ForeColor="#FF3300"
                     Text="Mushrooms"
                     TextAlign="Right"
                     OnCheckedChanged="SelectedItems"/>
 
-                    <asp:CheckBox id="CheckBox3" runat="server"
+                    <asp:CheckBox id="CheckBox4" runat="server"
                     AutoPostBack="True" ForeColor="#FF3300"
                     Text="Green Olives"
                     TextAlign="Right"
                     OnCheckedChanged="SelectedItems"/>
 
-                    <asp:CheckBox id="CheckBox4" runat="server"
+                    <asp:CheckBox id="CheckBox5" runat="server"
                     AutoPostBack="True" ForeColor="#FF3300"
                     Text="Green Peppers"
                     TextAlign="Right"
@@ -52,8 +52,11 @@
                         <ContentTemplate>
                             <font color="#FF3300"> TOTAL:</font> 
                             <asp:Label ID="Label1" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>
+
+                    <asp:Button ID="SubmitBtn" runat="server" Text="Make It!" OnClick="CheckIfValid" />
 
 </asp:Content>
 

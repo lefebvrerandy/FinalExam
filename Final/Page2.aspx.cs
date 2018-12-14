@@ -10,6 +10,7 @@ namespace Final
     public partial class Page2 : System.Web.UI.Page
     {
         double total = 0;
+        string totalOrder = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -30,10 +31,10 @@ namespace Final
             int length = selected.Length;
             //Check which items have been selected
             int i;
-            if (selected[4] == "Pizza")
+            if (selected[0] == "Pizza")
             {
                 total += 10;
-                for (i = 0; i < length; i++)
+                for (i = 1; i < length; i++)
                 {
                     switch (selected[i])
                     {
@@ -55,8 +56,11 @@ namespace Final
                         default:
                             break;
                     }
+                    totalOrder += ", " + selected[i];
                 }
-            Label1.Text = "$" + total.ToString("0.00");
+
+                Label2.Text = totalOrder;    
+                Label1.Text = "$" + total.ToString("0.00");
             }
             else
             {
@@ -73,23 +77,23 @@ namespace Final
 
             if (CheckBox1.Checked)
             {
-                selectedTopping[0] = "Pepperoni";
+                selectedTopping[0] = "Pizza";
             }
             if (CheckBox2.Checked)
             {
-                selectedTopping[1] = "Mushrooms";
+                selectedTopping[1] = "Pepperoni";
             }
             if (CheckBox3.Checked)
             {
-                selectedTopping[2] = "Green Olives";
+                selectedTopping[2] = "Mushrooms";
             }
             if (CheckBox4.Checked)
             {
-                selectedTopping[3] = "Green Peppers";
+                selectedTopping[3] = "Green Olives";
             }
             if (CheckBox5.Checked)
             {
-                selectedTopping[4] = "Pizza";
+                selectedTopping[4] = "Green Peppers";
             }
             if (CheckBox6.Checked)
             {
@@ -98,6 +102,17 @@ namespace Final
 
 
             return selectedTopping;
+        }
+
+        protected void CheckIfValid(object sender, EventArgs e)
+        {
+            // The user atleast has selected pizza.
+            // Lets redirect them to the next page with their current order
+            if (CheckBox5.Checked)
+            {
+                // Save contents of 
+                // Redirect to page 3. 
+            }
         }
     }
 }
