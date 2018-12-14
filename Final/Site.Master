@@ -19,7 +19,7 @@
 
 
         <!-- Script for sliding the page contents right as the menu bar opens -->
-        <script type="text/javascript">
+<%--        <script type="text/javascript">
             function openNav()
             {
                 document.body.style.marginLeft = "234px";
@@ -43,7 +43,7 @@
                 document.getElementById("pageFooterLogo").style.marginLeft = "0px";
             }
 
-        </script>
+        </script>--%>
 
 
 
@@ -64,7 +64,7 @@
                 <asp:UpdatePanel ID="TextBoxUpdatePanel" runat="server">
                     <ContentTemplate>
 
-
+<%--
                             <!-- Upper Menu bar -->
                             <ul>
                                 <li><span onclick="openNav()">&#9776 View Files</span></li>
@@ -75,15 +75,17 @@
 
                             <!-- File selection sliding menu -->
                             <div id="mySidenav" class="sidenav">
-                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>--%>
                  
                                 <!-- Body content determined by the default web page-->
-                                <asp:ContentPlaceHolder id="PageBodyContent" runat="server" />
+                                <asp:ContentPlaceHolder id="PageBodyContent" runat="server">
+
+                                </asp:ContentPlaceHolder>
                             </div>
                 
 
                         <!-- Main text-box input area -->
-                        <asp:TextBox ID="TextEditor" TextMode="MultiLine" PlaceHolder="Please select a file to begin" CssClass="Textbox" runat="server" />
+                        <%--<asp:TextBox ID="TextEditor" TextMode="MultiLine" PlaceHolder="Please select a file to begin" CssClass="Textbox" runat="server" />--%>
                     </ContentTemplate>
                 </asp:UpdatePanel>
 

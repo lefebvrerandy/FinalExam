@@ -110,9 +110,3 @@
 
      </script>
 </asp:Content>
-
-
-<%-- populate the file listing with the files found on the server, and attach a unique ID to each item --%>
-<asp:Content ID="BodyContent" ContentPlaceHolderID="PageBodyContent" runat="server">
-    <asp:PlaceHolder ID="ControlContainer" runat="server"/>
-</asp:Content>
