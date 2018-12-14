@@ -1,112 +1,71 @@
-﻿<%--
-*  FILE          : Default.aspx
-*  PROJECT       : PROG 2000 - Assignment 7
-*  PROGRAMMER    : Randy Lefebvre & Bence Karner 
-*  DESCRIPTION   : This file contains the HTML code required to display the content of the default web page, including the scripts 
-*                  required to asynchronous send and receive updates from the server
---%>
+﻿
 
 
-<%@ Page Title="Homepage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TextEditor.Default" %>
-<asp:Content ID="ScriptContent" ContentPlaceHolderID="HeaderPlaceHolder" runat="server">
+<%-- Content place holder for any scripts required for the default page --%>
+<%@ Page Title="Homepage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Final.Default" %>
+<asp:Content ID="ScriptContent" ContentPlaceHolderID="PageHeadContent" runat="server">
     
 
-    <!-- Get the index of the selected file, and pass it to loadTextFile for async text retrieval-->
+    <!-- Load the jquery scripts from the source solders -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/JQuery.js"></script>
-    <script type="text/javascript">
 
 
-        var xmlhttp;        //AJAX webXML object for sending async requests
-        var editorContents; //Text contents of the text box
-        var selectedFileID; //Selected file to load
+</asp:Content>
 
 
-        /*  
-         *  FUNCTION      : DEBUG
-         *  DESCRIPTION   : DEBUG
-         *  PARAMETERS    : DEBUG
-         *  RETURNS       : DEBUG
-         */
-        $(document).ready(function () {
-            $("#saveButton").click(function () {
+<%-- Body content for the default page- Get the users name and ensure its valid before continuing to page 2 --%>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="PageBodyContent" runat="server">
+    
+    <table runat="server">
+        <tr>
+            <td colspan="2">Please enter your first name</td>
+        </tr>
+        <tr>
+            <td runat="server">    <!-- Input for firstName-->
+                <asp:TextBox 
+                    ID="firstNameTB" 
+                    PlaceHolder="John" 
+                    MaxLength="50" 
+                    runat="server"/>
+            </td>
+
+            <td runat="server">    <!-- Validator for firstName -->
+                <asp:RegularExpressionValidator 
+                    ID="firstNameValidator" 
+                    ValidationExpression="^[A-Za-z]+$"
+                    ErrorMessage="Please use english letters and don't leave the line blank" 
+                    ControlToValidate="firstNameTB" 
+                    runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td  colspan="2">Please enter your last name</td>
+        </tr>
+        <tr>
+            <td runat="server">    <!-- Input for lastName -->
+                <asp:TextBox 
+                    ID="lastNameTB" 
+                    PlaceHolder="Smith"
+                    MaxLength="50" 
+                    runat="server" />
+            </td>
 
 
-                //Check if the user is trying to save the contents of the text editor before selecting a file to open
-                if (selecetdFileID != null) {
+            <td runat="server">    <!-- Validator for lastName-->
+                <asp:RegularExpressionValidator 
+                    ID="lastNameValidator" 
+                    ValidationExpression="^[A-Za-z]+$"
+                    ErrorMessage="Please use english letters and don't leave the line blank" 
+                    ControlToValidate="lastNameTB" 
+                    runat="server" />
+            </td>
+        </tr>
+        <tr>    <!-- Button to continue to page 2 -->
+            <td colspan="2" runat="server">
+                <asp:Button ID="enterButton" Text="Enter" Onclick="EnterButtonClick" runat="server"/>
+            </td>
+        </tr>
+    </table>
 
-
-                    //Grab the contents of the text editor, and save it to a JSON object for outbound transport
-                    var boolReturn = saveFileContents();
-                    if (boolReturn == true) {
-                        var outgoingTextBoxContent = { "fileName": selectedFileID, "textContent": editorContents };
-                        var packagedMessage = JSON.stringify(outgoingTextBoxContent);
-                    }
-                }
-            });
-        });
-
-
-        /*  
-         *  FUNCTION      : DEBUG
-         *  DESCRIPTION   : DEBUG
-         *  PARAMETERS    : DEBUG
-         *  RETURNS       : bool : Returns true if the function executed fully
-         */
-        function saveFileContents()
-        {
-            editorContents = document.getElementById("TextEditor").innerText;
-            return true;
-        }
-
-
-
-        /*  
-         *  FUNCTION      : DEBUG
-         *  DESCRIPTION   : DEBUG
-         *  PARAMETERS    : DEBUG
-         *  RETURNS       : DEBUG
-         */
-        $(document).ready(function () {
-            $("a").click(function () {
-
-                //Get the id of the selected file name
-                selectedFileID = $(this).get(0).id;
-
-
-                //Set the objects text property to null indicating we want to get the contents of a file
-                var outgoingRequestObject = { "fileName": selectedFileID, "textContent": "NULL" };
-                var packagedMessage = JSON.stringify(outgoingRequestObject);
-
-
-                //Send the ajax request containing the packaged file name
-                $.ajax({
-                    method: "GET",
-                    url: "~/Default.aspx/FileLocator",
-                    data: packagedMessage,
-                    contentType: "application/json; charset=ascii",
-                    dataType: "json",
-                    success: function (msg) {
-                        var boolReturn = updateTextBoxConets(msg);
-                    }
-                });
-            });
-        });
-
-
-
-
-        /*  
-         *  FUNCTION      : updateTextBoxConets
-         *  DESCRIPTION   : DEBUG
-         *  PARAMETERS    : DEBUG
-         *  RETURNS       : DEBUG
-         */
-        function updateTextBoxConets(msg)
-        {
-            document.getElementById("TextEditor").innerText = msg;
-            return true;
-        }
-
-     </script>
 </asp:Content>
