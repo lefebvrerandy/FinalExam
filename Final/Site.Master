@@ -1,113 +1,36 @@
-﻿<%--
-*    FILE         : Site.Mater.aspx
-*	PROJECT       : PROG 2000 - Assignment 7
-*	PROGRAMMER    : Randy Lefebvre & Bence Karner 
-*	DESCRIPTION   : This file contains the forward facing web form elements used throughout the web application.
-*                   The file is used in conjunction with the other web forms to create a complete web page for 
-*                   the online text editor.
---%>
-
-
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TextEditor.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Final.Site" %>
 <!DOCTYPE html PUBLIC>
 <html lang="en">
     <head runat="server">
-        <title><%: Page.Title %>: L&K Publishing</title>
+        <title><%: Page.Title %>: Pizza</title>
 		<meta charset="ASCII">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="~/StyleSheets/SS-MasterStyleSheet.css" rel="stylesheet" type="text/css" runat="server"/>
-
-
-        <!-- Script for sliding the page contents right as the menu bar opens -->
-        <script type="text/javascript">
-            function openNav()
-            {
-                document.body.style.marginLeft = "234px";
-                document.getElementById("mySidenav").style.width = "234px";
-                document.getElementById("TextEditor").style.marginLeft = "auto";
-                document.getElementById("TextEditor").style.marginRight = "auto";
-                document.getElementById("pageFooter").style.marginLeft = "234px";
-                document.getElementById("pageFooterLogo").style.marginLeft = "234px";
-            }
-
-
-            //Restore the previous settings  when closing the navigation bar-->
-            function closeNav()
-            {
-                document.body.style.marginLeft= "0px";
-                document.body.style.backgroundColor = "#282c34";
-                document.getElementById("mySidenav").style.width = "0px";
-                document.getElementById("TextEditor").style.marginLeft="auto";
-                document.getElementById("TextEditor").style.marginRight = "auto";
-                document.getElementById("pageFooter").style.marginLeft = "0px";
-                document.getElementById("pageFooterLogo").style.marginLeft = "0px";
-            }
-
-        </script>
-
-
-
+                
+        
+        <!-- DEBUG -->
+        <asp:ContentPlaceHolder id="PageHeadContent" runat="server" />
 
 
     </head>
     <body class="masterBody" runat="server">
+
+        <h1>SET Pizza Shop</h1>
+        <br /><br /><br /><br />
+
         <form name="submitForm" runat="server">
-            
-            
-            <!-- Encase the file selection menu, and the textbox in an update panel to allow aync callbacks for populating the list and textbox -->
             <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
+            
 
-                <!--Load page specific scripts -->
-                <asp:ContentPlaceHolder ID="HeaderPlaceHolder" runat="server"/>
-
-
-                <asp:UpdatePanel ID="TextBoxUpdatePanel" runat="server">
+            <!-- DEBUG -->
+            <div>            
+                <asp:UpdatePanel ID="AjaxUpdatePanel" runat="server">
                     <ContentTemplate>
-
-
-                            <!-- Upper Menu bar -->
-                            <ul>
-                                <li><span onclick="openNav()">&#9776 View Files</span></li>
-                                <li><span><img src="/Assets/floppy-disk.png" id="saveButton" height="22" /></span>
-                            </ul>
-                            <br>
-
-
-                            <!-- File selection sliding menu -->
-                            <div id="mySidenav" class="sidenav">
-                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                  
-                                <!-- Body content determined by the default web page-->
-                                <asp:ContentPlaceHolder id="PageBodyContent" runat="server" />
-                            </div>
-                
-
-                        <!-- Main text-box input area -->
-                        <asp:TextBox ID="TextEditor" TextMode="MultiLine" PlaceHolder="Please select a file to begin" CssClass="Textbox" runat="server" />
+                        <!-- Body content determined by the default web page-->
+                        <asp:ContentPlaceHolder id="PageBodyContent" runat="server" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
-
-
-            <!-- Footer with company info -->
-            <img id="pageFooterLogo" src="Assets/logo.png" class="companyLogo">
-            <div id="pageFooter" class="footer">
-                <div>
-                    <h3 class="footerCompanyDetails">  Lefebvre-Karner Publishing Inc.</h3>
-                    <p class="footerCompanyDetails">  2567 Clarke Dr, Ontario, Canada</p>
-                    <p class="footerCompanyDetails">  905-379-3456</p>
-                </div>
-            </div>
-
-
-            <!-- Slogan/company belief text -->
-            <div class="footerQuote">
-                <pre>
-                    <i>What we are doing to the forests of the world is but a mirror 
-                    reflection of what we are doing to ourselves and to one another
-                    - Mahatma Gandhi</i> <br>
-                    <b>Protect the Earth, and publish your work digitally</b>
-                </pre>
-                <img src="Assets/rightDecoration.png" class="footerDecoration">
             </div>
         </form>
     </body>
