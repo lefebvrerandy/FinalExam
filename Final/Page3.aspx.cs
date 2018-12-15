@@ -40,8 +40,7 @@ namespace Final
             string lastName = Convert.ToString(Session["sessionlastName"]);
 
             string pizzaList = Convert.ToString(Session["pizzaIngredients"]);
-            CustomerFirst.Text = firstName;
-            CustomerLast.Text = lastName;
+            Page3Greetings.Text = "Welcome " + firstName + " " +lastName;
             CustomerOrder.Text = pizzaList;
         }
 
@@ -68,7 +67,7 @@ namespace Final
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
             Thread.Sleep(3000);
-            Session["orderStatus"] = "Cancelled";
+            Session["orderStatus"] = "Canceled";
 
             redirectToPage4();
         }
@@ -78,7 +77,6 @@ namespace Final
         /// </summary>
         protected void redirectToPage4()
         {
-            //Server.Transfer("Page1.aspx");
             Response.Redirect("Page4.aspx");
         }
     }

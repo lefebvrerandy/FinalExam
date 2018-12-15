@@ -12,7 +12,7 @@
     <!-- Table containing the instructions,and input fields for the first page -->
     <table runat="server">
         <tr>
-            <td colspan="2" class="firstNameInstructions">Please enter your first name</td>
+            <td colspan="2" class="instructions">Please enter your first name</td>
         </tr>
 
 
@@ -31,7 +31,7 @@
             </td>
         </tr>
         <tr>
-            <td  colspan="2" class="lastNameinstructions">Please enter your last name</td>
+            <td  colspan="2" class="instructions">Please enter your last name</td>
         </tr>
 
 

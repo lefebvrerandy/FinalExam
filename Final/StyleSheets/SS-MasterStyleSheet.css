@@ -46,21 +46,17 @@
     font-size: 40px;
     font-family: verdana;
     color: #FFFFFF;
-    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+    font-weight: bold;
+    /*text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);*/
     text-align: center;
 }
 
-.firstNameInstructions {
+.instructions {
     font-size: 30px;
     font-family: verdana;
     color: #FFFFFF;
 }
 
-.lastNameinstructions {
-    font-size: 30px;
-    font-family: verdana;
-    color: #FFFFFF;
-}
 
 .textboxInput {
     border-style: inset;

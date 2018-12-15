@@ -71,6 +71,7 @@
     <Content Include="Assets\cardboard_texture.jpg" />
     <Content Include="Assets\oldschoolTable - Copy.jpg" />
     <Content Include="Assets\oldschoolTable.jpg" />
+    <Content Include="Countdown_3_2_1.gif" />
     <Content Include="Default.aspx" />
     <Content Include="Page2.aspx" />
     <Content Include="Page3.aspx" />

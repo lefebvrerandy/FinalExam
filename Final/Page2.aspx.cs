@@ -4,12 +4,6 @@
  *                  to work. Methods in here include: SelectItems, pizzaToppingsSelected, CheckIfValid
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace Final
 {
     public partial class Page2 : System.Web.UI.Page
@@ -39,6 +33,7 @@ namespace Final
 
             string[] selected = pizzaToppingsSelected();
             int length = selected.Length;
+
             //Check which items have been selected
             int i;
             if (selected[0] == "Pizza")

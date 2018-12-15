@@ -22,22 +22,22 @@ namespace Final {
         protected global::System.Web.UI.ScriptManager ScriptManager;
         
         /// <summary>
-        /// CustomerFirst control.
+        /// Page4Greetings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CustomerFirst;
+        protected global::System.Web.UI.WebControls.Label Page4Greetings;
         
         /// <summary>
-        /// CustomerLast control.
+        /// orderHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CustomerLast;
+        protected global::System.Web.UI.WebControls.Label orderHeader;
         
         /// <summary>
         /// CustomerOrder control.
@@ -47,6 +47,15 @@ namespace Final {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CustomerOrder;
+        
+        /// <summary>
+        /// orderStatusHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label orderStatusHeader;
         
         /// <summary>
         /// CustomerOrderStatus control.

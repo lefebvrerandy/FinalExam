@@ -4,12 +4,6 @@
  *                  to work. Methods in here include: LoadSessionVariables
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace Final
 {
     public partial class Page4 : System.Web.UI.Page
@@ -31,10 +25,9 @@ namespace Final
 
             string pizzaList = Convert.ToString(Session["pizzaIngredients"]);
             string status = Convert.ToString(Session["orderStatus"]);
-            CustomerFirst.Text = firstName;
-            CustomerLast.Text = lastName;
+            Page4Greetings.Text = "Thank you " + firstName + " " + lastName;
             CustomerOrder.Text = pizzaList;
-            CustomerOrderStatus.Text = status;
+            CustomerOrderStatus.Text = "Order was: " + status;
         }
     }
 }

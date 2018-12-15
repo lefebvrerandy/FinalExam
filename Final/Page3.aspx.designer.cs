@@ -22,22 +22,22 @@ namespace Final {
         protected global::System.Web.UI.ScriptManager ScriptManager;
         
         /// <summary>
-        /// CustomerFirst control.
+        /// Page3Greetings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CustomerFirst;
+        protected global::System.Web.UI.WebControls.Label Page3Greetings;
         
         /// <summary>
-        /// CustomerLast control.
+        /// salesReportHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CustomerLast;
+        protected global::System.Web.UI.WebControls.Label salesReportHeader;
         
         /// <summary>
         /// CustomerOrder control.
@@ -58,15 +58,6 @@ namespace Final {
         protected global::System.Web.UI.UpdatePanel Update1;
         
         /// <summary>
-        /// ConfirmBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ConfirmBtn;
-        
-        /// <summary>
         /// CancelBtn control.
         /// </summary>
         /// <remarks>
@@ -74,6 +65,15 @@ namespace Final {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelBtn;
+        
+        /// <summary>
+        /// ConfirmBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ConfirmBtn;
         
         /// <summary>
         /// OrderLbl control.

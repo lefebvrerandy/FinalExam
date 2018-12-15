@@ -1,44 +1,38 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page3.aspx.cs" Inherits="Final.Page3" %>
-
-
-<%-- DEBUG --%>
+﻿<%@ Page Title="Step 3: Order Confirmation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Page3.aspx.cs" Inherits="Final.Page3" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageBodyContent" runat="server">
     <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
-        <script type="text/javascript">
-        </script>
+        <script type="text/javascript"></script>
 
-    
-    <p>
-    Welcome 
-    <asp:Label ID="CustomerFirst" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
-     
-    <asp:Label ID="CustomerLast" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
-     . 
-    <br/>
-    Your current order is a 
-    <asp:Label ID="CustomerOrder" runat="server" ForeColor="#FF3300" style="font-family: Consolas"></asp:Label>
 
+
+    <asp:Label ID="Page3Greetings" CssClass="subHeading" runat="server" />
+    <br />
+    <br />
+    &nbsp<asp:Label ID="salesReportHeader" Text=" Your order includes: " CssClass="instructions" Style="text-align:left; font-weight: bold;" runat="server" />
+    <asp:Label ID="CustomerOrder" CssClass="priceLabel" runat="server" />
+
+
+    <br />
+    <br />
     <asp:UpdatePanel ID="Update1" runat="server">
         <ContentTemplate>
-            <asp:Button ID="ConfirmBtn" runat="server" Text="Confirm" OnClick="ConfirmBtn_Click"/>
-            <asp:Button ID="CancelBtn" runat="server" Text="Cancel" OnClick="CancelBtn_Click"/>
-
-            <asp:Label ID="OrderLbl" runat="server"></asp:Label>
+            <asp:Button ID="CancelBtn" CssClass="button" runat="server" Text="Cancel" OnClick="CancelBtn_Click"/>
+            <br />
+            <asp:Button ID="ConfirmBtn" CssClass="button" runat="server" Text="Confirm" OnClick="ConfirmBtn_Click"/>
+            <asp:Label ID="OrderLbl" runat="server" />
 
 
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-
                     <ProgressTemplate>
 
-<%--                        Two options here. Either a static text to explain its a 3 second wait, or a fun little gif that counts down from 3--%>
-                        <img src="Countdown_3_2_1.gif" height="100" width="150" border-radius: 50%;/>
-
-<%--                        <asp:Label ID="TimerCountDown" runat="server" Text="Redirecting in 3 seconds..."
-                            Font-Bold="True" Font-Names="Consolas" ForeColor="#FFCC66" style="color: #FF5050"></asp:Label>--%>
+                        <br />
+                        <asp:Label ID="TimerCountDown" runat="server" 
+                            Text="Confirming order in 3 seconds..."
+                            Font-Bold="True" 
+                            Font-Names="Consolas" 
+                            CssClass="errorMessage"/>
                     </ProgressTemplate>
                 </asp:UpdateProgress>
-
-    </ContentTemplate>
+        </ContentTemplate>
     </asp:UpdatePanel>
-    </p>
 </asp:Content>
