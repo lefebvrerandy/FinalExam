@@ -9,6 +9,10 @@
     <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
         <script type="text/javascript"></script>
 
+    <!-- Start the update panel -->
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+
 
     <!-- Organize the toppings into a table-->
     <table id="customizePizza">
@@ -73,8 +77,7 @@
     </table>
 
     <br/>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+
             <asp:Label ID="totalPriceLabel" Text="Total: " CssClass="priceLabel" runat="server"/>
             <asp:Label ID="Label1" CssClass="pizzaPrice" runat="server" />
             <asp:Label ID="Label2" CssClass="pizzaPrice" runat="server" />
