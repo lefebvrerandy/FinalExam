@@ -40,6 +40,9 @@
 }
 
 .subHeading {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 40px;
     font-family: verdana;
     color: #FFFFFF;
@@ -51,14 +54,12 @@
     font-size: 30px;
     font-family: verdana;
     color: #FFFFFF;
-    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
 }
 
 .lastNameinstructions {
     font-size: 30px;
     font-family: verdana;
     color: #FFFFFF;
-    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
 }
 
 .textboxInput {
@@ -73,17 +74,15 @@
     font-size: 30px;
     font-family: verdana;
     color: tomato;
-    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
 }
 
 .button {
-    position: fixed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #4CAF50;
-    display: inline-block;
     padding: 15px 32px;
     text-align: center;
-    margin-left: 0px;
-    margin-right: 0px;
     font-size: 30px;
     font-family: verdana;
     color: #FFFFFF;
@@ -96,74 +95,47 @@
     }
 
 
+.ingrediants {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 24px;
+    font-family: verdana;
+    color: #FFFFFF;
+}
+
+.tableHeader {
+    font-size: 30px;
+    font-family: verdana;
+    color: #FFFFFF;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #282c34;
+    background-color: #4CAF50;
+}
+
+#customizePizza tr:hover {
+    background-color: #4CAF50;
+}
+
+
+.priceLabel {
+    font-family: Verdana;
+    padding: 5px;
+    text-align: left;
+    font-size: 24px;
+    color: #282c34;
+}
+
+.pizzaPrice {
+    text-align: left;
+    font-size: 24px;
+    font-family: verdana;
+    color: orangered;
+}
+
 img {
     border-radius: 25px;
 }
-/*.tg {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-color: #aaa;
-}
-
-.tg td {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 10px 5px;
-    border-style: solid;
-    border-width: 0px;
-    overflow: hidden;
-    word-break: normal;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-color: #aaa;
-    color: #333;
-    background-color: #fff;
-}
-
-.tg th {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    padding: 10px 5px;
-    border-style: solid;
-    border-width: 0px;
-    overflow: hidden;
-    word-break: normal;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-color: #aaa;
-    color: #fff;
-    background-color: #f38630;
-}
-
-.tg .tg-ss8h {
-    background-color: #FCFBE3;
-    font-size: 18px;
-    text-align: right;
-    vertical-align: top
-}
-
-.tg .tg-1bic {
-    background-color: #FCFBE3;
-    font-size: 18px;
-    text-align: left;
-    vertical-align: top
-}
-
-.tg .tg-wnax {
-    font-size: 24px;
-    text-align: right;
-    vertical-align: top
-}
-
-.tg .tg-n0m6 {
-    font-size: 18px;
-    text-align: right;
-    vertical-align: top
-}
-
-.tg .tg-nx8p {
-    font-size: 18px;
-    text-align: left;
-    vertical-align: top
-}*/

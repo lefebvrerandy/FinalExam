@@ -51,14 +51,9 @@
                 <asp:Label ID="lastNameValidator" runat="server" Text="Mandatory" CssClass="errorMessage"/>
             </td>
         </tr>
-
-
-        <!-- Button to continue to page 2 -->
-        <tr>    
-            <td colspan="2" runat="server">
-                <asp:Button ID="enterButton" CssClass="button" Text="Enter" Onclick="EnterButtonClick" runat="server"/>
-            </td>
-        </tr>
     </table>
+
+    <!-- Button to continue to page 2 -->
+    <asp:Button ID="enterButton" CssClass="button" Text="Enter" Onclick="EnterButtonClick" runat="server"/>
 
 </asp:Content>

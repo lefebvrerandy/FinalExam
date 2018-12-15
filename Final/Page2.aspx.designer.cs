@@ -13,6 +13,15 @@ namespace Final {
     public partial class Page2 {
         
         /// <summary>
+        /// Page2Greetings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Page2Greetings;
+        
+        /// <summary>
         /// ScriptManager control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace Final {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// totalPriceLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalPriceLabel;
         
         /// <summary>
         /// Label1 control.

@@ -20,14 +20,13 @@ namespace Final
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["pizzaIngredients"] = "default";
+            string userFirstname = Session["sessionFirstName"].ToString();
+            Page2Greetings.Text = "Ciao " + userFirstname;
         }
 
-        /*
-
-        */
 
         /// <summary>
-        /// This method calls PizzaToppingSelected() to find out which checkboxes are checked.
+        /// This method calls PizzaToppingSelected() to find out which check boxes are checked.
         /// It then adjusts the totals accordingly. Each topping are as followed:
         ///             Pizza = $10
         ///             Pepperoni, Mushrooms, Green Olives, Green Peppers = $1 each
@@ -68,7 +67,7 @@ namespace Final
                             break;
                     }
 
-                    //These 3 if statemenets set up the totalOrder String values to display
+                    //These 3 if statements set up the totalOrder String values to display
                     // What, if any, ingredients have been selected
                     if (totalOrder == "")
                     {
@@ -145,24 +144,24 @@ namespace Final
         }
 
         /// <summary>
-        /// This method simpally checks to see if atleast the Pizza checkbox is selected. If so
+        /// This method simply checks to see if at least the Pizza check box is selected. If so
         /// they can move on to the next page. If not, they cannot go to the next page
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         protected void CheckIfValid(object sender, EventArgs e)
         {
-            // The user atleast has selected pizza.
+            // The user at least has selected pizza.
             // Lets redirect them to the next page with their current order
             if (CheckBox1.Checked)
             {
                 // Save contents of their pizza listing
                 Session["pizzaIngredients"] = finalOrder;
 
-                // Redirect to page 3. 
+                // Redirect to page 3
                 Server.Transfer("Page3.aspx");
             }
-            Label2.Text = "Please at least select a pizza. We cannot make nothing..";
+            Label2.Text = "Mamma mia, please select a pizza. We cannot make nothing...";
         }
     }
 }
