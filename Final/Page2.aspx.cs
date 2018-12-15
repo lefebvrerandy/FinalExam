@@ -156,6 +156,7 @@ namespace Final
                 // Redirect to page 3
                 Server.Transfer("Page3.aspx");
             }
+            Label1.Text = "";
             Label2.Text = "Mamma mia, please select a pizza. We cannot make nothing...";
         }
     }
