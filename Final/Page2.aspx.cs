@@ -66,9 +66,9 @@ namespace Final
                     // What, if any, ingredients have been selected
                     if (totalOrder == "")
                     {
-                        totalOrder += "Pizza: ";
+                        totalOrder += "Pizza with, ";
                     }
-                    if (totalOrder == "Pizza: ")
+                    if (totalOrder == "Pizza with, ")
                     {
                         totalOrder += selected[i];
                     }
@@ -81,7 +81,7 @@ namespace Final
                 }
 
                 // If no toppings are selected. Lets let the user know
-                if (totalOrder == "Pizza: ")
+                if (totalOrder == "Pizza with, ")
                 {
                     totalOrder += "No Toppings selected";
                 }

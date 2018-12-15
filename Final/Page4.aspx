@@ -8,11 +8,13 @@
     <asp:Label ID="Page4Greetings" CssClass="subHeading" runat="server" />
 
     <br/>
-    <asp:Label ID="orderHeader" Text="Your Order: " CssClass="instructions" runat="server" />
+    &nbsp<asp:Label ID="orderHeader" Text="Your Order: " CssClass="instructions" runat="server" />
     <asp:Label ID="CustomerOrder" CssClass="priceLabel" runat="server"/>
 
     <br/>
-    <asp:Label ID="orderStatusHeader" Text="Status: " CssClass="instructions" runat="server" />
+    <br/>
+    <br/>
+    &nbsp<asp:Label ID="orderStatusHeader" Text="Status: " CssClass="instructions" runat="server" />
     <asp:Label ID="CustomerOrderStatus" CssClass="priceLabel" runat="server"/>
 
 </asp:Content>

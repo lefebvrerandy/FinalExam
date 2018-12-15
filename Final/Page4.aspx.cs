@@ -27,7 +27,7 @@ namespace Final
             string status = Convert.ToString(Session["orderStatus"]);
             Page4Greetings.Text = "Thank you " + firstName + " " + lastName;
             CustomerOrder.Text = pizzaList;
-            CustomerOrderStatus.Text = "Order was: " + status;
+            CustomerOrderStatus.Text = "Order was " + status + "!";
         }
     }
 }

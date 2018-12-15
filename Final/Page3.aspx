@@ -26,7 +26,8 @@
                     <ProgressTemplate>
 
                         <br />
-                        <asp:Label ID="TimerCountDown" runat="server" 
+                        <br />
+                        &nbsp&nbsp<asp:Label ID="TimerCountDown" runat="server" 
                             Text="Confirming order in 3 seconds..."
                             Font-Bold="True" 
                             Font-Names="Consolas" 
